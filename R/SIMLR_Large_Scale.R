@@ -146,19 +146,19 @@
     
     y = kmeans(F_eig,c,nstart=200)
     
-    cat("Performing t-SNE.\n")
-    
-    I = as.vector(seq(1,ncol(ind)*nrow(ind)+1,ncol(ind)))
-    J = as.vector(t(ind))
-    V = as.vector(t(S0))
-    ydata = SIMLR.Rtsne(I,J,V)$Y
+    # cat("Performing t-SNE.\n")
+    # 
+    # I = as.vector(seq(1,ncol(ind)*nrow(ind)+1,ncol(ind)))
+    # J = as.vector(t(ind))
+    # V = as.vector(t(S0))
+    # ydata = SIMLR.Rtsne(I,J,V)$Y
     
     # create the structure with the results
     results = list()
     results[["y"]] = y
     results[["S0"]] = S0
     results[["F"]] = F_eig
-    results[["ydata"]] = ydata
+    # results[["ydata"]] = ydata
     results[["alphaK"]] = alphaK
     results[["val"]] = val
     results[["ind"]] = ind
